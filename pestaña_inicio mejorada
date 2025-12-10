@@ -1,0 +1,27 @@
+                                                            # # PESTAÑA INICIO ##
+frame_inicio = tk.Frame(notebook, bg="#FDEBD0")  
+notebook.add(frame_inicio,tex="INICIO")
+titulo = tk.Label(frame_inicio, text="Bienvenido a la Barbería 14k🦂",
+                  font=("Arial Black", 26, "bold"),
+                  fg="#641E16",  # 
+                  bg="#FDEBD0")
+titulo.pack(pady=20)
+
+                                          # Botones de acceso rápido
+btn_frame = tk.Frame(frame_inicio, bg="#FDEBD0")
+btn_frame.pack(pady=20)
+
+btn_clientes = tk.Button(btn_frame, text="📋 Clientes", width=15,
+                         font=("Arial", 14), bg="#F8C471", fg="#1B2631",
+                         command=lambda: notebook.select(frame_clientes))
+btn_clientes.grid(row=0, column=0, padx=10, pady=5)
+
+btn_servicios = tk.Button(btn_frame, text="💈 Servicios", width=15,
+                          font=("Arial", 14), bg="#F8C471", fg="#1B2631",
+                          command=lambda: notebook.select(frame_servicios))
+btn_servicios.grid(row=0, column=1, padx=10, pady=5)
+
+btn_turnos = tk.Button(btn_frame, text="📅 Turnos", width=15,
+                       font=("Arial", 14), bg="#F8C471", fg="#1B2631",
+                       command=lambda: notebook.select(frame_turnos))
+btn_turnos.grid(row=0, column=2, padx=10, pady=5)
